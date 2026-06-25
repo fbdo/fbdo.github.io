@@ -1,0 +1,88 @@
+/* Book page layout. Plain CSS loaded via customCSS (minified, not
+ * SCSS-compiled), so selectors stay flat. Colors mirror hugo-coder's
+ * palette and dark-mode mechanism (colorscheme-dark / colorscheme-auto +
+ * prefers-color-scheme).
+ *
+ * Light: fg #212121, link #1565c0 · Dark: fg #dadada, link #42a5f5
+ */
+
+.book-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    margin: 2rem 0;
+}
+
+.book-cover-link {
+    flex: 0 0 auto;
+    border: none;
+}
+
+.book-cover {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.book-cover-link:hover .book-cover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25);
+}
+
+.book-details {
+    flex: 1 1 16rem;
+    min-width: 0;
+}
+
+.book-title {
+    margin: 0 0 0.3rem;
+}
+
+.book-subtitle {
+    margin: 0 0 1rem;
+    font-size: 1.05rem;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+.book-meta {
+    margin: 0 0 1.5rem;
+    font-size: 0.95rem;
+}
+
+.book-buy {
+    display: inline-block;
+    padding: 0.65rem 1.6rem;
+    font-weight: 600;
+    color: #fff !important;
+    background-color: #1565c0;
+    border-radius: 6px;
+    transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.book-buy:hover {
+    background-color: #0d47a1;
+    text-decoration: none;
+}
+
+.book-buy:active {
+    transform: translateY(1px);
+}
+
+/* ---- Dark mode: explicit toggle ---------------------------------------- */
+
+body.colorscheme-dark .book-buy:hover {
+    background-color: #1976d2;
+}
+
+/* ---- Dark mode: auto (follows OS preference) --------------------------- */
+
+@media (prefers-color-scheme: dark) {
+    body.colorscheme-auto .book-buy:hover {
+        background-color: #1976d2;
+    }
+}
