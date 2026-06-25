@@ -61,8 +61,9 @@ canonifyURLs = true
         lang = "en"
         loading = "lazy"
 
-    # Custom CSS
-    # customCSS = ["css/numered-headers.css"]
+    # Custom CSS — note: also declared under [languages.en.params] because the
+    # language params block shadows root [params] for the active language.
+    customCSS = ["css/contact-form.css"]
 
 [[params.social]]
     name = "Github"
@@ -95,6 +96,7 @@ canonifyURLs = true
         info = ["Solution Architect, Cloud, Agile Coach, DevOps, Polyglot Software Engineer and everything else..."]
         description = "Fabio Oliveira's personal website"
         keywords = "blog,developer,personal"
+        customCSS = ["css/contact-form.css"]
 
         [languages.en.menu]
 
@@ -116,7 +118,7 @@ canonifyURLs = true
         [[languages.en.menu.main]]
         name = "Contact me"
         weight = 4
-        url = "https://twitter.com/messages/compose?recipient_id=31106182"
+        url = "/contact.html"
 
         [[languages.en.menu.main]]
         name = "GPG Key"

@@ -1,0 +1,137 @@
+/* Contact form styling.
+ *
+ * hugo-coder compiles its palette from SCSS variables (not CSS custom
+ * properties), so we can't read them at runtime. Instead we reuse the
+ * theme's exact color values and mirror its dark-mode mechanism:
+ * `body.colorscheme-dark` plus `body.colorscheme-auto` under a
+ * prefers-color-scheme media query. (This file is plain CSS loaded via
+ * customCSS — minified, not SCSS-compiled — so selectors stay flat.)
+ *
+ * Light palette  — bg #fafafa, fg #212121, border #ccc, link #1565c0
+ * Dark palette   — bg #212121, fg #dadada, border #4f4f4f, link #42a5f5
+ */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    margin: 2rem 0;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 1.25rem;
+    padding: 0.65rem 0.8rem;
+    font: inherit;
+    color: #212121;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #9e9e9e;
+}
+
+.contact-form textarea {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.15);
+}
+
+.contact-form button {
+    align-self: flex-start;
+    margin-top: 0.25rem;
+    padding: 0.65rem 1.6rem;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    background-color: #1565c0;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0d47a1;
+}
+
+.contact-form button:active {
+    transform: translateY(1px);
+}
+
+/* Belt-and-suspenders: keep the honeypot out of view */
+.contact-form .hidden {
+    display: none !important;
+}
+
+/* ---- Dark mode: explicit toggle ---------------------------------------- */
+
+body.colorscheme-dark .contact-form input[type="text"],
+body.colorscheme-dark .contact-form input[type="email"],
+body.colorscheme-dark .contact-form textarea {
+    color: #dadada;
+    background-color: #2a2a2a;
+    border-color: #4f4f4f;
+}
+
+body.colorscheme-dark .contact-form input::placeholder,
+body.colorscheme-dark .contact-form textarea::placeholder {
+    color: #8a8a8a;
+}
+
+body.colorscheme-dark .contact-form input:focus,
+body.colorscheme-dark .contact-form textarea:focus {
+    border-color: #42a5f5;
+    box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.2);
+}
+
+body.colorscheme-dark .contact-form button:hover {
+    background-color: #1976d2;
+}
+
+/* ---- Dark mode: auto (follows OS preference) --------------------------- */
+
+@media (prefers-color-scheme: dark) {
+    body.colorscheme-auto .contact-form input[type="text"],
+    body.colorscheme-auto .contact-form input[type="email"],
+    body.colorscheme-auto .contact-form textarea {
+        color: #dadada;
+        background-color: #2a2a2a;
+        border-color: #4f4f4f;
+    }
+
+    body.colorscheme-auto .contact-form input::placeholder,
+    body.colorscheme-auto .contact-form textarea::placeholder {
+        color: #8a8a8a;
+    }
+
+    body.colorscheme-auto .contact-form input:focus,
+    body.colorscheme-auto .contact-form textarea:focus {
+        border-color: #42a5f5;
+        box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.2);
+    }
+
+    body.colorscheme-auto .contact-form button:hover {
+        background-color: #1976d2;
+    }
+}
