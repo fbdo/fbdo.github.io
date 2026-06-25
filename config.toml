@@ -63,7 +63,7 @@ canonifyURLs = true
 
     # Custom CSS — note: also declared under [languages.en.params] because the
     # language params block shadows root [params] for the active language.
-    customCSS = ["css/contact-form.css"]
+    customCSS = ["css/contact-form.css", "css/external-posts.css"]
 
 [[params.social]]
     name = "Github"
@@ -96,7 +96,7 @@ canonifyURLs = true
         info = ["Solution Architect, Cloud, Agile Coach, DevOps, Polyglot Software Engineer and everything else..."]
         description = "Fabio Oliveira's personal website"
         keywords = "blog,developer,personal"
-        customCSS = ["css/contact-form.css"]
+        customCSS = ["css/contact-form.css", "css/external-posts.css"]
 
         [languages.en.menu]
 

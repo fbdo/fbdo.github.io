@@ -1,0 +1,15 @@
+/* Visual cue for posts that link to an external site (front matter
+ * `externalLink`). Rendered by the layouts/posts/li.html override.
+ * The icon inherits the theme's link color automatically. */
+
+.external-post-icon {
+    margin-left: 0.4em;
+    font-size: 0.75em;
+    /* lift slightly so it sits next to the cap height, not the baseline */
+    vertical-align: 0.08em;
+    opacity: 0.7;
+}
+
+.external-post:hover .external-post-icon {
+    opacity: 1;
+}
