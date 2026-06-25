@@ -18,10 +18,6 @@ canonifyURLs = true
 [pagination]
   pagerSize = 20
 
-[services]
-  [services.disqus]
-    shortname = "fabiooliveira-me"
-
 [markup]
   [markup.highlight]
     style = "b2"
@@ -50,6 +46,20 @@ canonifyURLs = true
     commit = "https://github.com/fbdo/fbdo.github.io/tree/"
 
     rtl = false
+
+    # Comments via giscus (GitHub Discussions). Theme follows the site's
+    # light/dark colorscheme via the `colorscheme` localStorage key.
+    [params.giscus]
+        repo = "fbdo/fbdo.github.io"
+        repoID = "MDEwOlJlcG9zaXRvcnkxNjQwMTU4MTE="
+        category = "General"
+        categoryID = "DIC_kwDOCcauw84C_3Vt"
+        mapping = "pathname"
+        reactionsEnabled = "1"
+        inputPosition = "bottom"
+        theme = "preferred_color_scheme"
+        lang = "en"
+        loading = "lazy"
 
     # Custom CSS
     # customCSS = ["css/numered-headers.css"]
