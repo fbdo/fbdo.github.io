@@ -15,6 +15,12 @@ canonifyURLs = true
   [[module.imports]]
     path = "github.com/luizdepra/hugo-coder"
 
+# Google Analytics 4. Hugo's internal google_analytics.html template (invoked
+# by the theme's baseof.html) renders the GA4 gtag.js snippet and only fires on
+# production builds — local `hugo server` runs are not tracked.
+[services.googleAnalytics]
+  ID = "G-V2C1LXBZJ3"
+
 [pagination]
   pagerSize = 20
 
