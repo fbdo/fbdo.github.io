@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2310 940" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1120"/>
+      <stop offset="1" stop-color="#111a2e"/>
+    </linearGradient>
+    <linearGradient id="arrow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#64748b"/>
+      <stop offset="0.2"  stop-color="#0ea5e9"/>
+      <stop offset="0.45" stop-color="#6366f1"/>
+      <stop offset="0.65" stop-color="#a855f7"/>
+      <stop offset="0.85" stop-color="#fb923c"/>
+      <stop offset="1"    stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="c0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#94a3b8"/><stop offset="1" stop-color="#475569"/></linearGradient>
+    <linearGradient id="cSDD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#4338ca"/></linearGradient>
+    <linearGradient id="c3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a855f7"/><stop offset="1" stop-color="#7e22ce"/></linearGradient>
+    <linearGradient id="c4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fb923c"/><stop offset="1" stop-color="#ea580c"/></linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="2310" height="940" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="60" y="88" fill="#f8fafc" font-size="46" font-weight="700">The journey toward an autonomous SDLC</text>
+  <text x="60" y="130" fill="#94a3b8" font-size="25" font-weight="400">One axis sorts every AI-powered SDLC framework: how much of the lifecycle does AI drive?</text>
+  <text x="60" y="166" fill="#64748b" font-size="22" font-weight="400">As AI drives more of the lifecycle, human effort per stage falls — the descent toward autonomous development.</text>
+
+  <!-- Axis end labels -->
+  <text x="62" y="232" fill="#94a3b8" font-size="22" font-weight="600">AI suggests code</text>
+  <text x="2256" y="232" fill="#6ee7b7" font-size="22" font-weight="600" text-anchor="end">AI runs the whole lifecycle · human-in-loop → 0</text>
+
+  <!-- Axis arrow -->
+  <g filter="url(#sh)">
+    <path d="M 60 261 L 2215 261 L 2215 244 L 2258 273 L 2215 302 L 2215 285 L 60 285 Z" fill="url(#arrow)"/>
+  </g>
+
+  <!-- connector dots on the axis -->
+  <circle cx="255"  cy="273" r="11" fill="#64748b" stroke="#e2e8f0" stroke-width="3"/>
+  <circle cx="705"  cy="273" r="11" fill="#6366f1" stroke="#e0e7ff" stroke-width="3"/>
+  <circle cx="1155" cy="273" r="11" fill="#a855f7" stroke="#f3e8ff" stroke-width="3"/>
+  <circle cx="1605" cy="273" r="11" fill="#fb923c" stroke="#ffedd5" stroke-width="3"/>
+  <circle cx="2055" cy="273" r="11" fill="#34d399" stroke="#d1fae5" stroke-width="3"/>
+  <line x1="255"  y1="284" x2="255"  y2="420" stroke="#64748b" stroke-width="3" stroke-dasharray="4 6"/>
+  <line x1="705"  y1="284" x2="705"  y2="420" stroke="#6366f1" stroke-width="3" stroke-dasharray="4 6"/>
+  <line x1="1155" y1="284" x2="1155" y2="420" stroke="#a855f7" stroke-width="3" stroke-dasharray="4 6"/>
+  <line x1="1605" y1="284" x2="1605" y2="420" stroke="#fb923c" stroke-width="3" stroke-dasharray="4 6"/>
+  <line x1="2055" y1="284" x2="2055" y2="420" stroke="#34d399" stroke-width="3" stroke-dasharray="4 6"/>
+
+  <!-- Cards -->
+  <g filter="url(#sh)">
+    <rect x="55"   y="420" width="400" height="330" rx="20" fill="url(#c0)" opacity="0.9"/>
+    <rect x="505"  y="420" width="400" height="330" rx="20" fill="url(#cSDD)"/>
+    <rect x="955"  y="420" width="400" height="330" rx="20" fill="url(#c3)"/>
+    <rect x="1405" y="420" width="400" height="330" rx="20" fill="url(#c4)"/>
+  </g>
+  <!-- Aspirational card (dashed, ghosted) -->
+  <rect x="1855" y="420" width="400" height="330" rx="20" fill="#0e2a20" opacity="0.55"/>
+  <rect x="1855" y="420" width="400" height="330" rx="20" fill="none" stroke="#34d399" stroke-width="3" stroke-dasharray="10 8" opacity="0.9"/>
+
+  <!-- Card 0 — Autocomplete (historical) -->
+  <text x="77" y="462" fill="#e2e8f0" font-size="18" font-weight="700" opacity="0.85">2023–2024 · HISTORICAL</text>
+  <text x="77" y="502" fill="#ffffff" font-size="30" font-weight="700">Autocomplete</text>
+  <text x="77" y="534" fill="#e2e8f0" font-size="20">keystroke assist</text>
+  <text x="77" y="590" fill="#f1f5f9" font-size="20">Per-keystroke suggestions.</text>
+  <text x="77" y="616" fill="#f1f5f9" font-size="20">No spec, no lifecycle view.</text>
+  <text x="77" y="700" fill="#cbd5e1" font-size="18" font-weight="600">Copilot (autocomplete)</text>
+  <text x="77" y="726" fill="#cbd5e1" font-size="18" font-weight="600">TabNine · early Codex</text>
+
+  <!-- Card 1 — SDD (merged) -->
+  <text x="527" y="462" fill="#e0f2fe" font-size="18" font-weight="700" opacity="0.85">STOP 1 · SPEC-DRIVEN</text>
+  <text x="527" y="502" fill="#ffffff" font-size="30" font-weight="700">SDD</text>
+  <text x="527" y="534" fill="#dbeafe" font-size="20">spec = managed artifact</text>
+  <text x="527" y="588" fill="#eff6ff" font-size="19">A durable, portable spec the</text>
+  <text x="527" y="612" fill="#eff6ff" font-size="19">agent builds from — from IDE-</text>
+  <text x="527" y="636" fill="#eff6ff" font-size="19">embedded to repo-managed.</text>
+  <text x="527" y="694" fill="#c7d2fe" font-size="18" font-weight="700">Kiro · Cursor · Spec Kit</text>
+  <text x="527" y="720" fill="#c7d2fe" font-size="18" font-weight="600">OpenSpec · Taskmaster · Claude Code</text>
+
+  <!-- Card 2 — Human-managed SDLC -->
+  <text x="977" y="462" fill="#f3e8ff" font-size="18" font-weight="700" opacity="0.85">STOP 2 · FULL LIFECYCLE</text>
+  <text x="977" y="502" fill="#ffffff" font-size="29" font-weight="700">Human-managed SDLC</text>
+  <text x="977" y="532" fill="#f3e8ff" font-size="20">human-orchestrated multi-agent</text>
+  <text x="977" y="588" fill="#faf5ff" font-size="20">A team of role-based agent</text>
+  <text x="977" y="612" fill="#faf5ff" font-size="20">personas; you invoke and</text>
+  <text x="977" y="636" fill="#faf5ff" font-size="20">gate each stage.</text>
+  <text x="977" y="708" fill="#e9d5ff" font-size="19" font-weight="700">BMAD</text>
+
+  <!-- Card 3 — Agentic SDLC -->
+  <text x="1427" y="462" fill="#ffedd5" font-size="18" font-weight="700" opacity="0.9">STOP 3 · FULL LIFECYCLE</text>
+  <text x="1427" y="502" fill="#ffffff" font-size="30" font-weight="700">Agentic SDLC</text>
+  <text x="1427" y="532" fill="#ffedd5" font-size="20">AI-orchestrated lifecycle</text>
+  <text x="1427" y="588" fill="#fff7ed" font-size="20">AI adaptively drives the full</text>
+  <text x="1427" y="612" fill="#fff7ed" font-size="20">lifecycle; humans validate</text>
+  <text x="1427" y="636" fill="#fff7ed" font-size="20">via rituals.</text>
+  <text x="1427" y="710" fill="#fed7aa" font-size="22" font-weight="700">AI-DLC  ★</text>
+
+  <!-- Card 4 — Fully autonomous (aspirational) -->
+  <text x="1877" y="462" fill="#6ee7b7" font-size="18" font-weight="700" opacity="0.95">THE WISHFUL DIRECTION</text>
+  <text x="1877" y="502" fill="#ecfdf5" font-size="29" font-weight="700">Fully autonomous</text>
+  <text x="1877" y="534" fill="#6ee7b7" font-size="20" font-style="italic">not here yet</text>
+  <text x="1877" y="590" fill="#d1fae5" font-size="20">Machine-checkable</text>
+  <text x="1877" y="616" fill="#d1fae5" font-size="20">verification expands;</text>
+  <text x="1877" y="642" fill="#d1fae5" font-size="20">human-in-loop → 0.</text>
+  <text x="1877" y="700" fill="#6ee7b7" font-size="18" font-weight="600" font-style="italic">aspirational — where</text>
+  <text x="1877" y="726" fill="#6ee7b7" font-size="18" font-weight="600" font-style="italic">the field is heading</text>
+
+  <!-- Grouping brackets -->
+  <path d="M 55 782 L 55 792 L 455 792 L 455 782" fill="none" stroke="#64748b" stroke-width="2"/>
+  <text x="255" y="822" fill="#94a3b8" font-size="18" text-anchor="middle">Pre-SDD</text>
+
+  <path d="M 505 782 L 505 792 L 905 792 L 905 782" fill="none" stroke="#818cf8" stroke-width="2"/>
+  <text x="705" y="822" fill="#a5b4fc" font-size="18" text-anchor="middle" font-weight="600">Spec-Driven Development</text>
+
+  <path d="M 955 782 L 955 792 L 2255 792 L 2255 782" fill="none" stroke="#fb923c" stroke-width="2"/>
+  <text x="1605" y="822" fill="#fdba74" font-size="18" text-anchor="middle" font-weight="600">AI-native, full-lifecycle SDLC</text>
+
+  <!-- footer -->
+  <text x="60" y="882" fill="#64748b" font-size="19">"Autonomous" &#8800; "unsupervised" — AI-DLC's Mob rituals + audit trail are what make the widest span of AI autonomy safe.</text>
+  <text x="60" y="916" fill="#475569" font-size="17">Placement as of mid-2026 · directional. Endpoints (Autocomplete, Fully autonomous) are historical / aspirational anchors. — Fabio Braga de Oliveira, AI-DLC EMEA Champion</text>
+</svg>
