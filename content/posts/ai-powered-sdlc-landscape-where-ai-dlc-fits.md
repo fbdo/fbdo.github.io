@@ -26,7 +26,7 @@ That gap is why, across 2025–2026, we suddenly have *so many* AI-powered SDLC 
 
 ## A Cambrian explosion of frameworks
 
-We're living through a Cambrian explosion of AI-coding frameworks. In barely eighteen months the fossil record filled up — Spec Kit, OpenSpec, Kiro, Taskmaster, Cursor, Antigravity, BMAD, AI-DLC — each a new body plan for how humans and AI should build software together. As in the original Cambrian, an explosion this sudden isn't random: something in the environment changed and opened a wave of empty niches all at once. Four pressures pried them open.
+In barely eighteen months we've seen a Cambrian explosion of AI-coding frameworks — Spec Kit, OpenSpec, Kiro, Taskmaster, Cursor, Antigravity, BMAD, AI-DLC. An explosion this sudden is never random: something in the environment shifts and a wave of empty niches opens at once. Four pressures opened these:
 
 **1. Two failure modes left a gap in the middle.** On one side, AI-*assisted* coding — autocomplete per keystroke, no view of the lifecycle. On the other, AI-*autonomous* — "generate the whole app," no human oversight. Both break at production scale [\[S3\]](https://aws.amazon.com/blogs/devops/open-sourcing-adaptive-workflows-for-ai-driven-development-life-cycle-ai-dlc/)[\[S1\]](https://aws.amazon.com/blogs/devops/ai-driven-development-life-cycle/). Every framework below is filling the middle ground. The specific failure modes they target: **intent drift** (underspecified prompts), **context decay** (the agent forgets earlier decisions as the codebase grows), and **unverifiable output** (no acceptance criteria to check against) [\[S2\]](https://thebcms.com/blog/spec-driven-development).
 
@@ -71,6 +71,14 @@ It sits **furthest along the journey** for three reasons [\[S3\]](https://aws.am
 
 And a crucial clarification: **"autonomous" doesn't mean "unsupervised."** AI-DLC pushes AI to drive the widest span of the lifecycle of any framework here — but the human rituals and the audit trail are *precisely what make that autonomy safe*. The journey isn't toward removing humans. It's toward AI owning execution while humans own decisions and validation.
 
+### This isn't hypothetical — partners are already operating here
+
+The clearest sign AI-DLC is more than a thought experiment: global SIs are already productizing it, and the numbers are showing up in AWS's own AI-DLC customer proof points.
+
+- **A global systems integrator has built on it.** Wipro — one of AI-DLC's early adopters — now ships a public [Agentic AI SDLC Orchestrator](https://aws.amazon.com/marketplace/pp/prodview-rfxhvo4wl2xxo) on AWS Marketplace that autonomously drives the lifecycle from ideation through deployment. In AWS partner enablement, Wipro reported using AI-DLC to stand up a production-ready enterprise healthcare-payer platform in roughly **20 hours** — with three geographically distributed teams and domain-driven design.
+- **The proof points repeat across AWS's AI-DLC adopter stories.** A leading Philippines bank built and shipped a new application in **two days** (a ~50× velocity jump); a leading media network delivered six applications in two days (~**4× productivity**, ~223 engineer-days saved — roughly ten months of work); and a global ratings-and-analytics provider compressed **eight months of work into one week**. Different industries, same signal: the gains land when the *operating model* changes, not just the tool — the mirror image of the METR/DORA paradox that opened this post.
+- **And from my own seat:** across the EMEA partner rollouts I've led, the moment AI-DLC "clicks" is almost never the code generation. It's the first Mob Elaboration — a room of stakeholders watching AI turn a fuzzy intent into a validated plan in minutes — and the audit trail that means no one has to reconstruct *why* a decision was made three sprints later. The teams that get value are the ones ready to change how they operate, not the ones shopping for a faster autocomplete.
+
 ### AI-DLC vs. Spec-Driven Development — different altitudes, not competitors
 
 The most common confusion I hear is "isn't AI-DLC just another SDD tool?" No — they operate at **different altitudes**. SDD lives at the *feature* altitude (the spec is the durable artifact). AI-DLC lives at the *lifecycle* altitude (the methodology and its checkpoints are the product). They actually compose: you can run SDD-style specs *inside* an AI-DLC construction phase.
@@ -90,22 +98,29 @@ The most common confusion I hear is "isn't AI-DLC just another SDD tool?" No —
 
 > In one line: **SDD makes your coding trustworthy; AI-DLC makes your whole lifecycle AI-native.** Start with SDD for a fast win in one repo; adopt AI-DLC when you're ready to change how the team operates.
 
-### AI-DLC vs. BMAD — the closest neighbor
+A quick way to self-place, without overthinking it: if the work is a **throwaway experiment**, vibe-code it and move on; if it's **a feature your team must own and maintain**, reach for SDD; if it's **a whole lifecycle a team must own, evolve, and answer for**, you're in AI-DLC territory.
 
-BMAD is the nearest thing to AI-DLC on the journey: both go **beyond a single spec toward a full-lifecycle operating model**, and both put **humans in structured, ritualized roles** rather than one developer babysitting an autocomplete. The difference is *how* they orchestrate.
+### Why (and when) a framework like AI-DLC pays off
 
-| | **BMAD** | **AI-DLC** |
-|---|---|---|
-| **Core mechanism** | A team of role-based agent personas (Analyst/PM/Architect/PO/Dev/QA/SM — ~12 in v4, 19+ in v6) handing artifacts down an assembly line [\[S10\]](https://docs.bmad-method.org/)[\[S16\]](https://labs.sogeti.com/transforming-the-agentic-sdlc-with-bmad-a-graphic-overview/) | A phased methodology (inception → construction → operations) where AI drives and humans validate at rituals [\[S1\]](https://aws.amazon.com/blogs/devops/ai-driven-development-life-cycle/)[\[S3\]](https://aws.amazon.com/blogs/devops/open-sourcing-adaptive-workflows-for-ai-driven-development-life-cycle-ai-dlc/) |
-| **Where structure lives** | In the **agents** — each persona encodes a role's expertise [\[S16\]](https://labs.sogeti.com/transforming-the-agentic-sdlc-with-bmad-a-graphic-overview/) | In the **lifecycle stages + checkpoints** — the process is the product [\[S3\]](https://aws.amazon.com/blogs/devops/open-sourcing-adaptive-workflows-for-ai-driven-development-life-cycle-ai-dlc/) |
-| **Human collaboration** | Sequential review of each persona's output; two-phase (agentic planning → context-engineered implementation) [\[S16\]](https://labs.sogeti.com/transforming-the-agentic-sdlc-with-bmad-a-graphic-overview/) | Synchronous Mob Elaboration / Mob Construction — the team validates together, live [\[S3\]](https://aws.amazon.com/blogs/devops/open-sourcing-adaptive-workflows-for-ai-driven-development-life-cycle-ai-dlc/) |
-| **Adaptivity** | Largely a fixed persona pipeline [\[S16\]](https://labs.sogeti.com/transforming-the-agentic-sdlc-with-bmad-a-graphic-overview/) | Adaptive — AI recommends which stages run and how deep (Principle 10) [\[S3\]](https://aws.amazon.com/blogs/devops/open-sourcing-adaptive-workflows-for-ai-driven-development-life-cycle-ai-dlc/) |
-| **Greenfield & brownfield** | Both — dedicated brownfield workflow, PRD/architecture templates, Test Architect for regression risk [\[S16\]](https://labs.sogeti.com/transforming-the-agentic-sdlc-with-bmad-a-graphic-overview/)[\[S18\]](https://bmad-code-org-bmad-method-6.mintlify.app/workflows/document-project) | Both — analyzes existing repos, maps dependencies, summarizes legacy behavior before changing [\[S3\]](https://aws.amazon.com/blogs/devops/open-sourcing-adaptive-workflows-for-ai-driven-development-life-cycle-ai-dlc/) |
-| **Governance** | Implicit in the persona handoffs [\[S16\]](https://labs.sogeti.com/transforming-the-agentic-sdlc-with-bmad-a-graphic-overview/) | Explicit — every plan, decision, and approval logged; documentation-first [\[S3\]](https://aws.amazon.com/blogs/devops/open-sourcing-adaptive-workflows-for-ai-driven-development-life-cycle-ai-dlc/)[\[S11\]](https://eleks.com/blog/aws-ai-dlc-explained/) |
+Recall the lesson from Section 1: **the bottleneck was never code generation — it was the operating model around it.** Faster code generation doesn't fix intent drift, context decay, or unverifiable output; it accelerates them. That's precisely the gap a full-lifecycle framework like AI-DLC is built to close.
 
-The honest distinction: **BMAD answers "who does each job?"** by casting AI into a full agile team of specialists. **AI-DLC answers "how does the team operate?"** by defining adaptive lifecycle stages with human decision-rituals. BMAD's structure is a *cast of agents*; AI-DLC's is a *methodology with checkpoints*. Both handle greenfield and brownfield, so the choice isn't about project type — it's about the orchestration model you want. Pick **BMAD** if a familiar Agile-role metaphor fits how your team thinks; pick **AI-DLC** if you want adaptive stage depth and an auditable, ritual-based governance trail over the whole lifecycle [\[S3\]](https://aws.amazon.com/blogs/devops/open-sourcing-adaptive-workflows-for-ai-driven-development-life-cycle-ai-dlc/)[\[S16\]](https://labs.sogeti.com/transforming-the-agentic-sdlc-with-bmad-a-graphic-overview/)[\[S18\]](https://bmad-code-org-bmad-method-6.mintlify.app/workflows/document-project).
+**Why the whole-lifecycle model earns its keep:**
 
-*(How AI-DLC evolves all of this in v2 is the subject of the next post in this series.)*
+1. **It targets the delivery loop, not the keystroke.** AI-DLC pushes AI across requirements, design, build, and operations rather than optimizing one editor session — so the productivity that a per-feature tool leaks back into rework and handoffs is captured at the level where it's actually lost [S1][S3].
+2. **Governance is a first-class output, not an afterthought.** Every AI plan, decision, and human approval is logged; documentation is produced as you go, not reconstructed later [S3][S11]. For regulated or audited environments, that trail is often the difference between "AI-assisted" being a pilot and being allowed in production.
+3. **Adaptivity keeps the ceremony proportional.** Principle 10 — no hard-wired workflow — means AI recommends which stages to run and how deep for a given intent, so a small change doesn't drag the full apparatus behind it while a complex epic still gets the rigor it needs [S3].
+4. **The human rituals make autonomy safe.** Mob Elaboration and Mob Construction put the team in the loop *together*, validating AI's plans live rather than one developer rubber-stamping output alone [S3]. Autonomy widens what AI drives; the rituals keep humans owning the decisions.
+
+**When teams benefit most:**
+
+- The pain is the **whole delivery loop** — misaligned requirements, decisions lost between sessions, output no one can verify — not just "we type code slowly." [S2][S19][S20]
+- Work spans **full epics or sprints** with **multiple stakeholders** who need to review at gates, and where **architectural decisions must be explicit and defensible** [S21].
+- **Governance, auditability, or regulatory pressure** make a logged decision trail valuable in its own right [S3][S11].
+- The team is **ready to change how it operates** — AI-DLC is a methodology, not a plugin, so the return comes from adopting the operating model, not from dropping a tool into one repo [S1][S3].
+
+**When it's overkill:** throwaway prototypes and single-feature work don't need a lifecycle methodology. If the goal is a fast, reliable win in one repo, spec-driven development (or plain vibe-based prototyping for experiments) is the lighter, right-sized choice — and, as noted above, SDD-style specs compose neatly *inside* an AI-DLC construction phase when you later scale up [S2][S4].
+
+> The question isn't "which framework wins?" — it's *"is my bottleneck a single feature, or the way my whole team delivers?"* AI-DLC is built for the second answer.
 
 ## The takeaway
 

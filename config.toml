@@ -87,10 +87,10 @@ canonifyURLs = true
     weight = 4
     url = "https://www.linkedin.com/in/fabiobragaoliveira/"
 [[params.social]]
-    name = "Xing"
-    icon = "fa-brands fa-xing fa-2x"
-    weight = 5
-    url = "https://www.xing.com/profile/Fabio_Oliveira9"
+    name = "Bluesky"
+    icon = "fa-brands fa-bluesky fa-2x"
+    weight = 2
+    url = "https://bsky.app/profile/fabiooliveira.eurosky.social"
 
 [languages]
     [languages.en]
@@ -107,31 +107,26 @@ canonifyURLs = true
         [languages.en.menu]
 
         [[languages.en.menu.main]]
-        name = "Résumé"
-        weight = 1
-        url = "https://www.linkedin.com/in/fabiobragaoliveira/"
-
-        [[languages.en.menu.main]]
         name = "Blog"
-        weight = 2
+        weight = 1
         url = "/posts/"
 
         [[languages.en.menu.main]]
         name = "Book"
-        weight = 3
+        weight = 2
         url = "/book.html"
 
         [[languages.en.menu.main]]
         name = "Projects"
-        weight = 4
+        weight = 3
         url = "https://github.com/fbdo?tab=repositories"
 
         [[languages.en.menu.main]]
         name = "Contact me"
-        weight = 5
+        weight = 4
         url = "/contact.html"
 
         [[languages.en.menu.main]]
         name = "GPG Key"
-        weight = 6
+        weight = 5
         url = "/gpg/fabio.braga-public.key"
