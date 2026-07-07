@@ -9,7 +9,7 @@ categories = ["cloud"]
 
 # The AI-Powered SDLC Landscape: Where AI-DLC Fits
 
-*AI-DLC v2 just hit preview ([awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows)). To mark it, I'm running a short series on AI-DLC over the coming weeks. This first post steps back to map the whole AI-powered SDLC landscape and show where AI-DLC fits; the follow-ups go deeper into what v2 changes and how to put it to work. As the AI-DLC EMEA Champion, this is the terrain I live in day-to-day — so treat this as a practitioner's map, not a marketing recap.*
+*AI-DLC v2 just hit preview ([awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows)). To mark it, I'm running a short series on AI-DLC over the coming weeks. This first post steps back to map the whole AI-powered SDLC landscape and show where AI-DLC fits; the follow-ups go deeper into what v2 changes and how to put it to work.*
 
 ![The journey toward an autonomous SDLC — from autocomplete through SDD to an agentic SDLC](/images/ai-powered-sdlc-landscape-where-ai-dlc-fits/ai-dlc-journey-4-waypoints.svg)
 *Figure: The journey to an autonomous SDLC — Autocomplete → SDD → Human-managed SDLC → Agentic SDLC, with a fully-autonomous aspirational endpoint. The single axis — how much of the lifecycle does AI drive? — sorts every framework.*
