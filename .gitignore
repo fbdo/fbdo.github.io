@@ -2,3 +2,7 @@ resources
 public
 .DS_Store
 .hugo_build.lock
+
+# Python readability tool (tools/readability)
+.venv
+__pycache__

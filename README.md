@@ -42,6 +42,39 @@ hugo new posts/my-post-title.md
 Set `draft = false` in the post's front matter to publish it. Posts use TOML
 front matter (`+++` delimiters).
 
+## Readability checks
+
+A small Python tool in [`tools/readability`](tools/readability) scores a post's
+prose against common readability metrics (Flesch Reading Ease, Flesch-Kincaid
+Grade, Gunning Fog, SMOG, Coleman-Liau, ARI, Dale-Chall). It strips front
+matter, code fences, tables, images, citation markers, link URLs, and the
+References section before scoring, so the numbers reflect the prose only.
+
+### One-time setup
+
+```bash
+# Creates a local virtualenv and installs dependencies (venv is gitignored)
+python3 -m venv tools/readability/.venv
+tools/readability/.venv/bin/pip install -r tools/readability/requirements.txt
+```
+
+### Scoring a post
+
+```bash
+# Score one or more posts
+tools/readability/.venv/bin/python tools/readability/readability.py \
+  content/posts/my-post.md
+
+# Score every post at once
+tools/readability/.venv/bin/python tools/readability/readability.py \
+  content/posts/*.md
+```
+
+Each metric is flagged `ok` or `review` against a best-practice target. For a
+technical audience, aim for Flesch Reading Ease of 50+ and grade-level metrics
+around 10-12; Dale-Chall runs high for jargon-heavy topics and is mostly
+useful for spotting relative changes between drafts.
+
 ## Updating the theme
 
 ```bash
