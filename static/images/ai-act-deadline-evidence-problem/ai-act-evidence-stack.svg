@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="gapGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FEF3E2"/>
+      <stop offset="1" stop-color="#FBE1C4"/>
+    </linearGradient>
+    <linearGradient id="wxGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF0FF"/>
+      <stop offset="1" stop-color="#D8E3FF"/>
+    </linearGradient>
+    <linearGradient id="awsGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF3E0"/>
+      <stop offset="1" stop-color="#FFE2B8"/>
+    </linearGradient>
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0b1f33" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1200" fill="#F7F9FC"/>
+
+  <!-- Header -->
+  <text x="60" y="86" font-size="46" font-weight="700" fill="#0B1F33">The EU AI Act Evidence Stack</text>
+  <text x="60" y="132" font-size="26" font-weight="400" fill="#5A6B7B">What the new tooling covers — and the gap it doesn&#8217;t</text>
+
+  <!-- Shared-responsibility rail -->
+  <text x="34" y="470" font-size="19" font-weight="700" fill="#B45309" transform="rotate(-90 34 470)" text-anchor="middle" letter-spacing="1.5">YOUR RESPONSIBILITY</text>
+  <text x="34" y="1000" font-size="19" font-weight="700" fill="#B7690E" transform="rotate(-90 34 1000)" text-anchor="middle" letter-spacing="1.5">AWS&#8217;S SIDE</text>
+
+  <!-- ================= GAP BAND (top) ================= -->
+  <g filter="url(#softShadow)">
+    <rect x="80" y="176" width="1060" height="300" rx="20" fill="url(#gapGrad)" stroke="#E8873B" stroke-width="2.5" stroke-dasharray="10 7"/>
+  </g>
+  <circle cx="132" cy="228" r="20" fill="#E8873B"/>
+  <text x="132" y="236" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">!</text>
+  <text x="170" y="222" font-size="30" font-weight="700" fill="#8A4B12">The gap in the middle — Article 50</text>
+  <text x="170" y="256" font-size="21" font-weight="600" fill="#B45309">The AI system your users actually touch</text>
+
+  <text x="112" y="308" font-size="22" fill="#5A3410">&#8226;&#160;&#160;First-contact AI disclosure (&#8220;you&#8217;re talking to a bot&#8221;)</text>
+  <text x="112" y="344" font-size="22" fill="#5A3410">&#8226;&#160;&#160;Machine-readable marking of synthetic output</text>
+  <text x="112" y="380" font-size="22" fill="#5A3410">&#8226;&#160;&#160;Deepfake &amp; public-interest-text labelling</text>
+
+  <rect x="112" y="404" width="720" height="48" rx="10" fill="#FBECDB" stroke="#E8873B" stroke-width="1.5"/>
+  <text x="130" y="435" font-size="21" font-weight="700" fill="#B02A1E">No tool auto-satisfies this. Design &amp; process work — human judgment.</text>
+
+  <!-- deadline badge -->
+  <rect x="852" y="200" width="268" height="86" rx="14" fill="#B02A1E"/>
+  <text x="986" y="234" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">DUE AUG 2, 2026</text>
+  <text x="986" y="266" font-size="19" font-weight="500" fill="#FFE3DF" text-anchor="middle">fines up to &#8364;15M / 3%</text>
+
+  <!-- ================= WATSONX BAND ================= -->
+  <g filter="url(#softShadow)">
+    <rect x="80" y="506" width="1060" height="212" rx="20" fill="url(#wxGrad)" stroke="#0F62FE" stroke-width="2.5"/>
+  </g>
+  <rect x="80" y="506" width="10" height="212" rx="5" fill="#0F62FE"/>
+  <circle cx="140" cy="560" r="19" fill="#0F62FE"/>
+  <path d="M131 560 l6 7 l12 -14" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="176" y="556" font-size="29" font-weight="700" fill="#0A2A6B">The AI system you build</text>
+  <text x="176" y="588" font-size="21" font-weight="600" fill="#0F62FE">IBM watsonx.governance</text>
+  <text x="112" y="642" font-size="21" fill="#26364A">&#8226;&#160;&#160;Model risk assessment &amp; use-case onboarding</text>
+  <text x="112" y="678" font-size="21" fill="#26364A">&#8226;&#160;&#160;Controls mapped to EU AI Act &#183; ISO 42001 &#183; NIST AI RMF</text>
+
+  <!-- ================= AWS BAND ================= -->
+  <g filter="url(#softShadow)">
+    <rect x="80" y="748" width="1060" height="212" rx="20" fill="url(#awsGrad)" stroke="#FF9900" stroke-width="2.5"/>
+  </g>
+  <rect x="80" y="748" width="10" height="212" rx="5" fill="#FF9900"/>
+  <circle cx="140" cy="802" r="19" fill="#EB8A00"/>
+  <path d="M131 802 l6 7 l12 -14" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="176" y="798" font-size="29" font-weight="700" fill="#7A4A00">The platform you build on</text>
+  <text x="176" y="830" font-size="21" font-weight="600" fill="#C77700">AWS Artifact Assurance Assistant</text>
+  <text x="112" y="884" font-size="21" fill="#43331B">&#8226;&#160;&#160;Citation-backed SOC / ISO / C5 evidence, self-serve</text>
+  <text x="112" y="920" font-size="21" fill="#43331B">&#8226;&#160;&#160;Answers CAIQ / SIG / custom DDQ questionnaires in minutes</text>
+
+  <!-- Footer takeaway -->
+  <rect x="80" y="994" width="1060" height="128" rx="18" fill="#0B1F33"/>
+  <text x="110" y="1044" font-size="25" font-weight="700" fill="#FFFFFF">The AI Act was never a reading problem. It&#8217;s an evidence problem.</text>
+  <text x="110" y="1084" font-size="21" font-weight="400" fill="#AEBED0">The tools collapse the ends of the stack. The middle — Article 50 — is still yours.</text>
+
+  <text x="1120" y="1162" font-size="16" fill="#8A98A8" text-anchor="end">Fabio Braga de Oliveira &#183; Sources: AWS, IBM, Lewis Silkin, DLA Piper, Lexology</text>
+</svg>
