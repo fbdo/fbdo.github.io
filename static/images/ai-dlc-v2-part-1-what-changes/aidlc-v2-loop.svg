@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="560" viewBox="0 0 880 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#8993a4"/>
+    </marker>
+    <marker id="arrg" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#36b37e"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="560" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#172b4d">AI-DLC v2 — What Actually Changes</text>
+  <text x="40" y="66" font-size="13" fill="#8993a4">Three shifts · a self-correcting loop with a human · learning that compounds up the org</text>
+
+  <!-- THREE SHIFTS -->
+  <text x="40" y="104" font-size="11" font-weight="700" letter-spacing="1" fill="#8993a4">THE THREE SHIFTS</text>
+  <g>
+    <rect x="40" y="116" width="255" height="78" rx="9" fill="#f4f5f7" stroke="#ebecf0"/>
+    <rect x="40" y="116" width="255" height="3" rx="1.5" fill="#0052CC"/>
+    <text x="56" y="140" font-size="11" font-weight="700" fill="#0052CC" font-family="monospace">SHIFT 1</text>
+    <text x="56" y="160" font-size="14" font-weight="700" fill="#172b4d">Composable building blocks</text>
+    <text x="56" y="180" font-size="11" fill="#8993a4" font-family="monospace">fixed stages → composable blocks</text>
+  </g>
+  <g>
+    <rect x="312" y="116" width="256" height="78" rx="9" fill="#f4f5f7" stroke="#ebecf0"/>
+    <rect x="312" y="116" width="256" height="3" rx="1.5" fill="#ff991f"/>
+    <text x="328" y="140" font-size="11" font-weight="700" fill="#d97706" font-family="monospace">SHIFT 2</text>
+    <text x="328" y="160" font-size="14" font-weight="700" fill="#172b4d">Machine-checkable verification</text>
+    <text x="328" y="180" font-size="11" fill="#8993a4" font-family="monospace">human validates all → verification</text>
+  </g>
+  <g>
+    <rect x="585" y="116" width="255" height="78" rx="9" fill="#f4f5f7" stroke="#ebecf0"/>
+    <rect x="585" y="116" width="255" height="3" rx="1.5" fill="#36b37e"/>
+    <text x="601" y="140" font-size="11" font-weight="700" fill="#00875a" font-family="monospace">SHIFT 3</text>
+    <text x="601" y="160" font-size="14" font-weight="700" fill="#172b4d">Verification-gated autonomy</text>
+    <text x="601" y="180" font-size="11" fill="#8993a4" font-family="monospace">human-centric → autonomy earned</text>
+  </g>
+
+  <!-- LOOP -->
+  <text x="40" y="240" font-size="11" font-weight="700" letter-spacing="1" fill="#8993a4">GENERATE → VERIFY → LEARN  (per stage)</text>
+
+  <!-- Generate -->
+  <rect x="40" y="254" width="220" height="86" rx="10" fill="#ffffff" stroke="#dfe1e6"/>
+  <rect x="40" y="254" width="220" height="3" rx="1.5" fill="#0065ff"/>
+  <text x="56" y="278" font-size="10" font-weight="700" fill="#0065ff" font-family="monospace">C1 · THE WHAT</text>
+  <text x="56" y="300" font-size="15" font-weight="700" fill="#172b4d">Generate</text>
+  <text x="56" y="320" font-size="11" fill="#44546f">Agent produces output</text>
+  <text x="56" y="334" font-size="11" fill="#44546f">from declarative specs.</text>
+
+  <!-- Verify -->
+  <rect x="330" y="254" width="220" height="86" rx="10" fill="#ffffff" stroke="#dfe1e6"/>
+  <rect x="330" y="254" width="220" height="3" rx="1.5" fill="#ff991f"/>
+  <text x="346" y="278" font-size="10" font-weight="700" fill="#d97706" font-family="monospace">C2 · IS IT RIGHT?</text>
+  <text x="346" y="300" font-size="15" font-weight="700" fill="#172b4d">Verify</text>
+  <text x="346" y="320" font-size="11" fill="#44546f">Self-check: inferential</text>
+  <text x="346" y="334" font-size="11" fill="#44546f">+ computational checks.</text>
+
+  <!-- Learn -->
+  <rect x="620" y="254" width="220" height="86" rx="10" fill="#ffffff" stroke="#dfe1e6"/>
+  <rect x="620" y="254" width="220" height="3" rx="1.5" fill="#36b37e"/>
+  <text x="636" y="278" font-size="10" font-weight="700" fill="#00875a" font-family="monospace">C3 · WHAT WE LEARNED</text>
+  <text x="636" y="300" font-size="15" font-weight="700" fill="#172b4d">Learn</text>
+  <text x="636" y="320" font-size="11" fill="#44546f">Corrections become rules,</text>
+  <text x="636" y="334" font-size="11" fill="#44546f">promoted into C2.</text>
+
+  <!-- forward arrows -->
+  <line x1="262" y1="297" x2="326" y2="297" stroke="#8993a4" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="552" y1="297" x2="616" y2="297" stroke="#8993a4" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- loop back arrow C3 -> C1 -->
+  <path d="M730,340 L730,366 L150,366 L150,342" fill="none" stroke="#36b37e" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrg)"/>
+  <text x="440" y="382" font-size="11" fill="#00875a" font-style="italic" text-anchor="middle">↺ a correction made once is never needed twice</text>
+
+  <!-- human + halting -->
+  <g>
+    <rect x="40" y="398" width="400" height="42" rx="8" fill="#ffffff" stroke="#ebecf0"/>
+    <circle cx="66" cy="419" r="13" fill="#f3e5f5"/>
+    <text x="66" y="424" font-size="14" text-anchor="middle">🧑</text>
+    <text x="90" y="416" font-size="12.5" font-weight="700" fill="#7b1fa2">Human in the loop</text>
+    <text x="90" y="432" font-size="10.5" fill="#44546f">Decides &amp; validates at gates — less as verification matures.</text>
+  </g>
+  <g>
+    <rect x="452" y="398" width="388" height="42" rx="8" fill="#ffffff" stroke="#ebecf0"/>
+    <circle cx="478" cy="419" r="13" fill="#fff0db"/>
+    <text x="478" y="424" font-size="13" text-anchor="middle">⏸</text>
+    <text x="502" y="416" font-size="12.5" font-weight="700" fill="#172b4d">Halting conditions</text>
+    <text x="502" y="432" font-size="10.5" fill="#44546f">Max iterations / token budget — escalates instead of looping.</text>
+  </g>
+
+  <!-- LEARNING LADDER -->
+  <text x="40" y="482" font-size="11" font-weight="700" letter-spacing="1" fill="#8993a4">LEARNING COMPOUNDS UP THE LEVELS  (strict-additive)</text>
+
+  <!-- three levels: project -> team -> org, arrows pointing up/right -->
+  <rect x="40" y="496" width="240" height="46" rx="9" fill="#ffffff" stroke="#ebecf0"/>
+  <rect x="40" y="496" width="4" height="46" rx="2" fill="#00857a"/>
+  <text x="58" y="518" font-size="11" font-weight="700" fill="#00857a" font-family="monospace">PROJECT</text>
+  <text x="58" y="534" font-size="10.5" fill="#44546f">This codebase's patterns</text>
+
+  <rect x="320" y="496" width="240" height="46" rx="9" fill="#ffffff" stroke="#ebecf0"/>
+  <rect x="320" y="496" width="4" height="46" rx="2" fill="#0052cc"/>
+  <text x="338" y="518" font-size="11" font-weight="700" fill="#0052cc" font-family="monospace">TEAM</text>
+  <text x="338" y="534" font-size="10.5" fill="#44546f">Conventions your team affirmed</text>
+
+  <rect x="600" y="496" width="240" height="46" rx="9" fill="#ffffff" stroke="#ebecf0"/>
+  <rect x="600" y="496" width="4" height="46" rx="2" fill="#6554c0"/>
+  <text x="618" y="518" font-size="11" font-weight="700" fill="#6554c0" font-family="monospace">ORG</text>
+  <text x="618" y="534" font-size="10.5" fill="#44546f">Standards that apply everywhere</text>
+
+  <line x1="282" y1="519" x2="316" y2="519" stroke="#8993a4" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="562" y1="519" x2="596" y2="519" stroke="#8993a4" stroke-width="2" marker-end="url(#arr)"/>
+</svg>
